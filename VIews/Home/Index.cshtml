@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+</head>
+<body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        getTodos();
+    });
+    function getTodos(){
+        $.ajax({
+            url:'api/todo',
+            type:'GET',
+            dataType:'json',
+            success:function(todos){
+                alert(todos.length);
+                $("#todosTable tbody").remove();
+                $.each(todos,function(index, todo){
+                    if($("#todosTable tbody").length == 0){
+                        $("#todosTable").append("<tbody></tbody>");
+                    }
+                    var row = "<tr><td>"+todo.name+"</td><td>"+todo.isComplete+ "</td></tr>";
+                    $("#todosTable tbody").append(row);
+                });
+
+            },
+            error:function(){
+                alert(request.response);
+            }
+        });
+    }
+    $(function(){
+        $("#addTodo").click(function(){
+                var options = {};  
+                options.url = "/api/AddTodo";  
+                options.type = "POST";  
+                var obj = {};  
+                obj.Name = $("#todoName").val();  
+                obj.isComplete = "true";  
+                console.dir(obj);  
+                options.data = JSON.stringify(obj);  
+                options.contentType = "application/json";  
+                options.dataType = "html";  
+            
+                options.success = function (msg) {  
+                    getTodos();
+                    //$("#msg").html(msg);  
+                },  
+                    options.error = function () {  
+                    alert("error");
+                    };  
+                $.ajax(options); 
+            
+        });
+    });
+    
+    </script>
+    <input type="text" id="todoName"/>
+    <input type="button" id="addTodo" value="Add"/>
+    <table id="todosTable">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Completed</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>

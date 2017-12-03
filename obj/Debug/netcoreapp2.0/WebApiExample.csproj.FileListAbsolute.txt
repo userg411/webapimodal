@@ -1,0 +1,10 @@
+/Users/serik/Dotnet/WebApiExample/bin/Debug/netcoreapp2.0/WebApiExample.deps.json
+/Users/serik/Dotnet/WebApiExample/bin/Debug/netcoreapp2.0/WebApiExample.runtimeconfig.json
+/Users/serik/Dotnet/WebApiExample/bin/Debug/netcoreapp2.0/WebApiExample.runtimeconfig.dev.json
+/Users/serik/Dotnet/WebApiExample/bin/Debug/netcoreapp2.0/WebApiExample.dll
+/Users/serik/Dotnet/WebApiExample/bin/Debug/netcoreapp2.0/WebApiExample.pdb
+/Users/serik/Dotnet/WebApiExample/obj/Debug/netcoreapp2.0/WebApiExample.csproj.CoreCompileInputs.cache
+/Users/serik/Dotnet/WebApiExample/obj/Debug/netcoreapp2.0/WebApiExample.AssemblyInfoInputs.cache
+/Users/serik/Dotnet/WebApiExample/obj/Debug/netcoreapp2.0/WebApiExample.AssemblyInfo.cs
+/Users/serik/Dotnet/WebApiExample/obj/Debug/netcoreapp2.0/WebApiExample.dll
+/Users/serik/Dotnet/WebApiExample/obj/Debug/netcoreapp2.0/WebApiExample.pdb
